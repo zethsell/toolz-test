@@ -1,0 +1,23 @@
+## SIGN IN
+POST http://localhost:8000/api/sign-in
+Content-Type: application/json
+
+{
+    "password": "test@1234",
+    "email": "marcio.theo.92@gmail.com"
+}
+
+###
+
+### SIGN UP
+POST http://localhost:8000/api/sign-up
+Content-Type: application/json
+
+{
+    "name": "Marcio T Rodrigues",
+    "password": "test@1234",
+    "password_confirmation": "test@1234",
+    "email": "marcio.theo.92@gmail.com"
+}
+
+###
