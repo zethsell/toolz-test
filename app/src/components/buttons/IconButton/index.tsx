@@ -31,7 +31,7 @@ function IconButton({classes = "", icon}: Props) {
 
     return (
         <button
-            className={`w-full md:min-w-[137px] h-12 rounded-[8px]  gap-[10px] border border-[#151515]  dark:border-[#EDEDED] inline-flex md:inline-flex justify-center items-center ${classes}`}
+            className={`w-full  h-12 rounded-[8px]  gap-[10px] border border-[#151515]  dark:border-[#EDEDED] inline-flex md:inline-flex justify-center items-center ${classes}`}
             type="button"
         >
             {getIcon()}

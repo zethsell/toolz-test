@@ -1,3 +1,5 @@
+"use client"
+
 import AuthLayout from "@/components/layouts/AuthLayout";
 import IconButton from "@/components/buttons/IconButton";
 import Line from "@/components/Line";
@@ -5,10 +7,42 @@ import Image from "next/image";
 import "./SignIn.css"
 import AuthInput from "@/components/inputs/AuthInput";
 import Logo from "@/components/svgs/logo";
+import Swal from 'sweetalert2'
+
+import {FormEvent} from "react";
 
 export default function Page() {
+    async function onSubmit(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault()
+
+        const formData = new FormData(event.currentTarget)
+        const response = await fetch('http://localhost:8000/api/sign-in', {
+            method: 'POST',
+            body: formData,
+        })
+
+        const result = await response.json()
+        if (result.error) {
+            await Swal.fire({
+                title: `Error ${response.status}!`,
+                text: result.error.errorMessage,
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            })
+
+            return
+        }
+
+        await Swal.fire({
+            title: 'Success!',
+            text: `Welcome ${result.data.user.name}`,
+            icon: 'success',
+            confirmButtonText: 'Thanks!'
+        })
+    }
+
     const content = (
-        <>
+        <form onSubmit={onSubmit}>
             <div className="division-hidden-logo">
                 <Logo/>
             </div>
@@ -42,11 +76,11 @@ export default function Page() {
             </div>
 
             <div className="division-input p-6 h-[126px]">
-                <AuthInput icon="/images/user.svg" type="text" label="Usuário"/>
+                <AuthInput icon="/images/user.svg" type="text" label="Usuário" name="email"/>
             </div>
 
             <div className="division-input pt-0 px-6 pb-6 h-[102px]">
-                <AuthInput icon="/images/lock.svg" type="password" label="Senha"/>
+                <AuthInput icon="/images/lock.svg" type="password" label="Senha" name="password"/>
             </div>
 
             <div className="w-full gap-4 hidden md:inline-flex pt-0 px-6 pb-6 h-[44px]">
@@ -60,6 +94,7 @@ export default function Page() {
 
             <div className="division-signIn-button  ">
                 <button
+                    type="submit"
                     className="h-12 bg-[#0761E2] px-6 py-5 gap-3 rounded-[8px] text-center inline-flex items-center justify-center w-full">
                     <Image alt="sign-in" src="/images/sign-in.svg" width="18" height="22" className="hidden md:block"/>
                     <span className=" text-white ">Entrar</span>
@@ -79,7 +114,7 @@ export default function Page() {
                 </div>
             </div>
 
-        </>
+        </form>
     )
 
 
