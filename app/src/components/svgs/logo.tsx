@@ -2,7 +2,8 @@ import {Svg} from "@/models";
 
 export default function Logo({color = 'black', height = 32, width = 132, className}: Svg) {
     return (
-        <svg width={width} height={height} viewBox="0 0 132 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} className={className} viewBox="0 0 132 32" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M1.35951 1.06238H30.6395C30.7277 1.06835 30.8107 1.1061 30.8733 1.16861C30.9358 1.23112 30.9735 1.31416 30.9795 1.40236V30.6823C30.9735 30.7705 30.9358 30.8536 30.8733 30.9161C30.8107 30.9786 30.7277 31.0163 30.6395 31.0223H1.35951C1.27131 31.0163 1.18827 30.9786 1.12576 30.9161C1.06325 30.8536 1.02551 30.7705 1.01953 30.6823V1.40236C1.06201 1.23244 1.18959 1.06238 1.35951 1.06238Z"
                 fill="black"/>

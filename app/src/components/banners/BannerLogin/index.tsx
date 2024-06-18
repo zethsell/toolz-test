@@ -25,9 +25,9 @@ function BannerLogin() {
 
     const content = (
         <>
-            <div className="w-full h-[245.33px]  flex justify-between">
-                <RoundedIconButton icon="/images/chevron-left.svg"/>
-                <RoundedIconButton icon="/images/moon.svg"/>
+            <div className="w-full h-[245.33px] flex justify-between">
+                <RoundedIconButton icon="chevron-left"/>
+                <RoundedIconButton icon="moon"/>
             </div>
             <Paginator content={contentArray}/>
         </>

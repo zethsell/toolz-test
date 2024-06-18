@@ -7,7 +7,7 @@ type Props = {
 
 function AuthAdBackground({content}: Props) {
     return (
-        <div className="background w-[1228px] h-full ">
+        <div className="background w-[1228px] h-full hidden md:block">
             <div className=" h-full w-full backdrop flex justify-between flex-col px-[56px] py-[80px]">
                 {content}
             </div>

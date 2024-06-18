@@ -1,7 +1,27 @@
 .division {
-    @apply w-full inline-flex p-6 gap-4
+    @apply w-full inline-flex md:p-6 gap-4 px-6 py-4
 }
 
 .division-input {
-    @apply w-full inline-flex h-[102px] pt-0 px-6 pb-6 gap-4
+    @apply w-full inline-flex  gap-4
+}
+
+.division-hidden-logo {
+    @apply w-full   h-[80px] sm:hidden inline-flex p-6 gap-[334px]
+}
+
+.division-buttons {
+    @apply w-full inline-flex p-6 gap-4   h-[96px]
+}
+
+.division-or {
+    @apply w-full inline-flex p-6 gap-4   h-[75px] md:h-[73px] items-center
+}
+
+.division-signIn-button {
+    @apply w-full inline-flex items-center h-[96px] md:p-6 gap-4 px-6 pb-6 pt-0
+}
+
+.division-pass-recovery {
+    @apply justify-center md:h-[70px]  h-[72px] w-full inline-flex p-6
 }
