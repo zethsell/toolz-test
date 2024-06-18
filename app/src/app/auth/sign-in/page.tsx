@@ -110,7 +110,7 @@ export default function Page() {
             <div className="division-pass-recovery ">
                 <div className="gap-1 inline-flex font-[400] text-[16px] leading-[22.4px]">
                     <p className="text-[#585858]  dark:text-[#909090]">Esqueceu sua senha?</p>
-                    <p className="md:text-[#0761E2] dark:text-white">Recuperar Senha</p>
+                    <p className="md:text-[#0761E2] dark:md:text-[#0761E2] dark:text-white">Recuperar Senha</p>
                 </div>
             </div>
 
