@@ -35,7 +35,6 @@
 #########################
 
 - Usuario de teste:
-   "password": "test1234",
-   "email": "test@test.com"
+  test@test.com: test1234,
 
   OBS: foi criado uma rota de signup vide o arquivo: **HttpRequests.http**, com isso é possivel criar seu próprio usuário de teste
