@@ -1,0 +1,7 @@
+.division {
+    @apply w-full inline-flex p-6 gap-4
+}
+
+.division-input {
+    @apply w-full inline-flex h-[102px] pt-0 px-6 pb-6 gap-4
+}

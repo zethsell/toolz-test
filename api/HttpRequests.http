@@ -1,14 +1,4 @@
-## SIGN IN
-POST http://localhost:8000/api/sign-in
-Content-Type: application/json
-
-{
-    "password": "test@1234",
-    "email": "marcio.theo.92@gmail.com"
-}
-
 ###
-
 ### SIGN UP
 POST http://localhost:8000/api/sign-up
 Content-Type: application/json
@@ -21,3 +11,26 @@ Content-Type: application/json
 }
 
 ###
+
+## SIGN IN
+POST http://localhost:8000/api/sign-in
+Content-Type: application/json
+
+{
+    "password": "test@1234",
+    "email": "marcio.theo.92@gmail.com"
+}
+
+###
+
+## SIGN IN WITH USER CREATED BY SEEDER
+POST http://localhost:8000/api/sign-in
+Content-Type: application/json
+
+{
+    "password": "test1234",
+    "email": "test@test.com"
+}
+
+###
+

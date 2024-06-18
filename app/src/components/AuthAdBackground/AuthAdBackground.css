@@ -1,0 +1,8 @@
+.background {
+    background: url("/images/image.jpg") no-repeat;
+    background-size: cover;
+}
+
+.backdrop {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
